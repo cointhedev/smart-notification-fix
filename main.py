@@ -1,9 +1,11 @@
 import time
+import sys
 from os import system
 import os
 from datetime import datetime
-from src.inject import inject
-from src.notification import notification
+sys.path.append(os.getcwd())
+from inject import inject
+from notification import notification
 def alarm():
     i = 0
     file = open("reminders\\reminder.rem", "w")
