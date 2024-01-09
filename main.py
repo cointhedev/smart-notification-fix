@@ -15,7 +15,7 @@ def alarm(reminddate, remindtime, note):
         formatted_date = current_datetime.strftime("%d/%m/%y")
         formatted_time = current_datetime.strftime("%H:%M")
         time.sleep(1)
-        if formatted_date == reminddate and formatted_time == remindtime:
+        if formatted_date >= reminddate and formatted_time >= remindtime:
             popup("-- Reminder --", f"note: {note}\ncoded with love by github.com/infamouskoala", "src\\notification.mp3")
             print(f"{note}")
             input()
